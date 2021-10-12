@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: #222020;
+    color: #000;
+}
+
+h1{
+    line-height: 85px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #b91313 20%, #5d5d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.relogio {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 247, 247, 0.911);
+    border-radius: 50%;
+    box-shadow: -3px -3px 7px #b91313,
+        3px 3px 5px  #5d5d;
+    
+}
+
+.relogio:before {
+    position: absolute;
+    top: 50%;
+    content: '';
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: -3px -3px -7px
+}
+
+.relogio:after {
+    position: absolute;
+    content: '';
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #b91313 30%, #5d5d 100%);
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    
+}
+
+.relogio .porca-central {
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    
+}
+
+.center-nut2 {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    z-index: 15;
+    position: absolute;
+
+}
+
+
+.indicator div {
+    position: absolute;
+    width: 2.5px;
+    height: 15px;
+    background: #0b7002;
+}
+
+.indicator div:nth-child(1) {
+    transform: rotate(30deg) translateY(-100px);
+}
+
+.indicator div:nth-child(2) {
+    transform: rotate(60deg) translateY(-100px);
+}
+
+.indicator div:nth-child(3) {
+    transform: rotate(90deg) translateY(-100px);
+    background:#262626;
+}
+
+.indicator div:nth-child(4) {
+    transform: rotate(120deg) translateY(-100px);
+}
+
+.indicator div:nth-child(5) {
+    transform: rotate(150deg) translateY(-100px);
+}
+
+.indicator div:nth-child(6) {
+    transform: rotate(180deg) translateY(-100px);
+    background: #262626;
+}
+
+.indicator div:nth-child(7) {
+    transform: rotate(210deg) translateY(-100px);
+}
+
+.indicator div:nth-child(8) {
+    transform: rotate(240deg) translateY(-100px);
+}
+
+.indicator div:nth-child(9) {
+    transform: rotate(270deg) translateY(-100px);
+    background: #262626;
+}
+
+.indicator div:nth-child(10) {
+    transform: rotate(300deg) translateY(-100px);
+}
+
+.indicator div:nth-child(11) {
+    transform: rotate(330deg) translateY(-100px);
+}
+
+.indicator div:nth-child(12) {
+    transform: rotate(360deg) translateY(-100px);
+    background: #262626;
+}
+
+.sec-hand, .min-hand, .hr-hand {
+    position: absolute;
+}
+
+.sec-hand, .sec{
+    height: 180px;
+    width: 180px;
+    z-index: 6;
+}
+
+.min-hand, .min{
+    height: 140px;
+    width: 140px;
+    z-index: 5;
+}
+.hr-hand, .hr{
+    height: 110px;
+    width: 110px;
+    z-index: 4;
+}
+.sec, .min, .hr{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+
+.sec:before {
+    position: absolute;
+    content: '';
+    height: 100px;
+    width: 3px;
+    top: 105px;
+    background: #920101;
+    border-radius: 5px;
+}
+
+.sec:after {
+    position: absolute;
+    content: '';
+    height: 35px;
+    width: 7px;
+    top: 105px;
+    background: #920101;
+    border-radius: 5px;
+}
+
+.min:before {
+    position: absolute;
+    content: '';
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 75px solid ;
+    top: -20px;
+    width: 1px;
+}
+
+.hr:before {
+    position: absolute;
+    content: '';
+    color:#000;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 40px solid ;
+    width: 1px;
+}
